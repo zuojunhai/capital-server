@@ -11,6 +11,8 @@ mongoose.set('useFindAndModify', false)
 const users=require('./routes/api/users')
 //引入profiles.js
 const profiles=require('./routes/api/profiles')
+//引入notes.js
+const notes=require('./routes/api/notes')
 
 //把数据库连接地址导入进来
 const db=require('./config/keys').mongoURI
@@ -31,6 +33,7 @@ require('./config/passport')(passport)
 //使用routes
 app.use('/api/users',users)
 app.use('/api/profiles',profiles)
+app.use('/api/notes',notes)
 
 //设置端口号
 const port=process.env.PORT || 5000

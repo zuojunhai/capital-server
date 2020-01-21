@@ -21,7 +21,7 @@ router.post('/add', passport.authenticate('jwt', { session: false }), (req, res)
     })
 })
 
-// @route  GET api/profiles/
+// @route  GET api/profiles/findAll
 // @desc   获取所有信息接口
 // @access private
 router.get('/findAll', passport.authenticate('jwt', { session: false }), (req, res) => {
